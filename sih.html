@@ -1,0 +1,196 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Smart Tourist Safety</title>
+    <meta name="description" content="AI, Geo-fencing, and Digital ID powered tourist safety and incident response." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sih.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">
+          <img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/shield.svg" alt="" class="logo" />
+          <span>Smart Tourist Safety</span>
+        </div>
+        <nav>
+          <a href="#features" data-i18n="nav.features">Features</a>
+          <a href="#dashboard" data-i18n="nav.dashboard">Dashboard</a>
+          <a href="#contact" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <select id="lang" aria-label="Language">
+            <option value="en">EN</option>
+            <option value="hi">हिं</option>
+            <option value="bn">বাং</option>
+          </select>
+          <button id="sosBtn" class="btn btn-danger" data-i18n="cta.sos">SOS</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 data-i18n="hero.title">Travel safer with AI, Geo‑Fencing and Digital ID</h1>
+            <p class="lead" data-i18n="hero.subtitle">
+              Real-time monitoring, private digital IDs, and rapid incident response for every tourist.
+            </p>
+            <div class="hero-ctas">
+              <a href="#features" class="btn btn-primary" data-i18n="cta.learnMore">Learn more</a>
+              <a href="#contact" class="btn btn-neutral" data-i18n="cta.getStarted">Get started</a>
+            </div>
+            <ul class="badges">
+              <li data-i18n="badge.blockchain">Blockchain Digital ID</li>
+              <li data-i18n="badge.geofence">Geo‑fencing Alerts</li>
+              <li data-i18n="badge.ai">AI Anomaly Detection</li>
+            </ul>
+          </div>
+          <div class="hero-art" role="img" aria-label="Heatmap and alerts preview">
+            <div class="mock-card">
+              <div class="mock-map">
+                <div class="pin pin-red" style="top: 28%; left: 62%;"></div>
+                <div class="pin pin-yellow" style="top: 55%; left: 30%;"></div>
+                <div class="pin pin-green" style="top: 70%; left: 70%;"></div>
+              </div>
+              <div class="mock-legend">
+                <span class="dot dot-red"></span><span data-i18n="legend.highRisk">High risk</span>
+                <span class="dot dot-yellow"></span><span data-i18n="legend.mediumRisk">Medium</span>
+                <span class="dot dot-green"></span><span data-i18n="legend.lowRisk">Low</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="container">
+          <h2 data-i18n="features.title">Key Features</h2>
+          <div class="grid">
+            <div class="card">
+              <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/id.svg" alt=""></div>
+              <h3 data-i18n="features.didTitle">Digital Tourist ID</h3>
+              <p data-i18n="features.didDesc">Secure, time‑bound IDs with KYC and selective disclosure.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/route.svg" alt=""></div>
+              <h3 data-i18n="features.geofenceTitle">Geo‑fencing</h3>
+              <p data-i18n="features.geofenceDesc">Smart alerts entering restricted or high‑risk zones.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/brain.svg" alt=""></div>
+              <h3 data-i18n="features.aiTitle">AI Anomalies</h3>
+              <p data-i18n="features.aiDesc">Detect drop‑offs, deviations, and prolonged inactivity.</p>
+            </div>
+            <div class="card">
+              <div class="icon"><img src="https://cdn.jsdelivr.net/gh/tabler/tabler-icons/icons/ambulance.svg" alt=""></div>
+              <h3 data-i18n="features.responseTitle">Rapid Response</h3>
+              <p data-i18n="features.responseDesc">SOS with live location to nearest unit and family.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="dashboard" class="section section-alt">
+        <div class="container">
+          <h2 data-i18n="dashboard.title">Operations Dashboard</h2>
+          <div class="dashboard">
+            <div class="dash-left">
+              <div class="panel">
+                <div class="panel-hd">
+                  <span data-i18n="dashboard.map">Live Map</span>
+                  <div class="chip chip-live" data-i18n="dashboard.live">LIVE</div>
+                </div>
+                <div class="mock-map large">
+                  <div class="heat heat-1"></div>
+                  <div class="heat heat-2"></div>
+                  <div class="heat heat-3"></div>
+                </div>
+              </div>
+            </div>
+            <div class="dash-right">
+              <div class="panel">
+                <div class="panel-hd"><span data-i18n="dashboard.alerts">Alerts</span></div>
+                <ul id="alertList" class="list">
+                  <li><span class="tag tag-red">SOS</span> <span data-i18n="dashboard.alert1">Distress signal near Tiger Hill</span></li>
+                  <li><span class="tag tag-yellow">GEOFENCE</span> <span data-i18n="dashboard.alert2">Entry into restricted corridor</span></li>
+                  <li><span class="tag tag-green">INFO</span> <span data-i18n="dashboard.alert3">Route back on track</span></li>
+                </ul>
+              </div>
+              <div class="panel">
+                <div class="panel-hd"><span data-i18n="dashboard.stats">Stats (24h)</span></div>
+                <div class="stats">
+                  <div class="stat">
+                    <div class="stat-num" id="statSos">12</div>
+                    <div class="stat-label" data-i18n="dashboard.sos">SOS</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-num" id="statAlerts">58</div>
+                    <div class="stat-label" data-i18n="dashboard.totalAlerts">Alerts</div>
+                  </div>
+                  <div class="stat">
+                    <div class="stat-num" id="statResponse">2.7m</div>
+                    <div class="stat-label" data-i18n="dashboard.avgResponse">Avg Response</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="note" data-i18n="dashboard.note">This is a static preview. Connect APIs for real data.</p>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <h2 data-i18n="contact.title">Contact & Demo</h2>
+          <form id="contactForm" class="form">
+            <label>
+              <span data-i18n="contact.name">Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span data-i18n="contact.email">Email</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span data-i18n="contact.message">Message</span>
+              <textarea name="message" rows="4" required></textarea>
+            </label>
+            <button class="btn btn-primary" type="submit" data-i18n="contact.send">Send</button>
+            <p id="formMsg" class="form-msg" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="copy">© <span id="year"></span> Smart Tourist Safety</div>
+        <div class="links">
+          <a href="#" data-i18n="footer.privacy">Privacy</a>
+          <a href="#" data-i18n="footer.terms">Terms</a>
+          <a href="#" data-i18n="footer.accessibility">Accessibility</a>
+        </div>
+      </div>
+    </footer>
+
+    <dialog id="sosDialog" aria-labelledby="sosTitle">
+      <form method="dialog" class="sos">
+        <h3 id="sosTitle" data-i18n="sos.title">Send SOS?</h3>
+        <p data-i18n="sos.subtitle">Share your live location with responders and emergency contacts.</p>
+        <div class="sos-actions">
+          <button value="cancel" class="btn btn-neutral" data-i18n="sos.cancel">Cancel</button>
+          <button value="confirm" class="btn btn-danger" data-i18n="sos.confirm">Send SOS</button>
+        </div>
+        <p id="sosMsg" class="form-msg" role="status" aria-live="polite"></p>
+      </form>
+    </dialog>
+
+    <script src="sih.js"></script>
+  </body>
+</html>
